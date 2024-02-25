@@ -567,6 +567,30 @@ M.General = {
 
     ["<leader>c"] = { "<cmd>Bdelete!<cr>", "Close Buffer", opts = { silent = true } },
 
+    ["<leader>ob"] = {
+      function()
+        if vim.o.showtabline == 2 then
+          vim.o.showtabline = 0
+        else
+          vim.o.showtabline = 2
+        end
+      end,
+      "Toggle Tabufline",
+      opts = { silent = true },
+    },
+
+    ["<leader>os"] = {
+      function()
+        if vim.o.laststatus == 3 then
+          vim.o.laststatus = 0
+        else
+          vim.o.laststatus = 3
+        end
+      end,
+      "Toggle Statusline",
+      opts = { silent = true },
+    },
+
     ["<leader>ol"] = {
       function()
         if vim.o.number then
@@ -598,7 +622,7 @@ M.General = {
       opts = { silent = true },
     },
 
-    ["<leader>os"] = {
+    ["<leader>oT"] = {
       function()
         require("base46").toggle_transparency()
       end,
