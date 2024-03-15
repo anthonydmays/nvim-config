@@ -14,13 +14,7 @@ end
 -- NOTE: File Explorer
 return {
   "nvim-tree/nvim-tree.lua",
-<<<<<<< HEAD:plugins/nvim-tree.lua
   enabled = true,
-  init = function()
-    require("core.utils").load_mappings "NvimTree"
-  end,
-=======
->>>>>>> upstream/main:lua/plugins/nvim-tree.lua
   cmd = {
     "NvimTreeOpen",
     "NvimTreeToggle",
