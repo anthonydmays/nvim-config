@@ -2,7 +2,6 @@
 
 config_dir="$HOME/.config/nvim"
 config_plugins="$HOME/.local/share/nvim/lazy"
-nvchad_repo="https://github.com/NvChad/NvChad.git"
 config_repo="https://github.com/anthonydmays/nvim-config.git"
 
 # Function to clone a Git repository with error handling
@@ -50,8 +49,7 @@ if [ -d "$config_dir" ]; then
 fi
 
 # Clone the Git repositories
-clone_repository "$nvchad_repo" "$config_dir"
-clone_repository "$config_repo" "$config_dir/lua/custom"
+clone_repository "$config_repo" "$config_dir"
 nvim
 
 echo "Installation complete. Your neovim configuration is now set up!"
